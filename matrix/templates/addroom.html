@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Room</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="/admin">Dashboard</a>
+        <a class="active" href="/addroom">Add Room</a>
+        <a href="/Generate">Generate</a>
+        <a href="/result">Show Result</a>
+        <a href="/login">Logout</a>
+    </div>
+
+    <!-- Add Room Form -->
+    <div class="container">
+        <h2>Add Room</h2>
+        <form action="" method="POST">
+            {% if error %}
+                <pre class="error-message">{{ error }}</pre>
+            {% endif %}
+
+            <div class="form-group">
+                <label for="room_no">Enter Room No.</label>
+                <input type="number" id="room_no" name="room_no" placeholder="Enter Room No." value="{{ room }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="row">No. of Rows</label>
+                <input type="number" id="row" name="row" min="0" max="15" value="{{ row }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="col">No. of Columns</label>
+                <input type="number" id="col" name="col" min="0" max="15" value="{{ col }}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="seat">Total No. of Seats</label>
+                <input type="number" id="seat" name="seat" min="0" max="225" value="{{ seat }}" required>
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

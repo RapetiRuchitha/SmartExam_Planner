@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+    <!---------------------------------- NAVIGATION BAR ---------------------------------->
+    <nav class="topnav">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a class="active" href="/contact">Contact</a>
+       
+    </nav>
+
+    <!------------------------------ CONTACT FORM ------------------------------>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/contact_submit" method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

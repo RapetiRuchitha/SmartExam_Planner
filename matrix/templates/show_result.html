@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SHOW RESULT</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* Custom Dropdown Styling */
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            background-color: white;
+            cursor: pointer;
+        }
+        select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="/admin">Dashboard</a>
+        <a href="/addroom">Add Room</a>
+        <a href="/Generate">Generate</a>
+        <a class="active" href="/result">Show Result</a>
+        <a href="/login">Logout</a>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container">
+        <form action="" method="POST">
+            <label>Select Room</label>
+            <select id="room_select" name="room" required>
+                {% for row in room_no %}
+                    {% if row and row[0] != None %}  <!-- Ensures no "None" value appears -->
+                        <option value="{{ row[0] }}">{{ row[0] }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <input type="submit" value="SHOW">
+            
+            {% if data %}
+                <button class="download-btn">
+                    <a href="{{ filename }}" download>Download Excel Sheet</a>
+                </button>
+            {% endif %}
+        </form>
+    </div>
+
+    <!-- Results Section -->
+    <div class="container result-container">
+        {{ data | safe }}
+    </div>
+
+</body>
+</html>

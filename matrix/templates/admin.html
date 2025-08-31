@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    
+    <!-- jQuery and DataTables CSS/JS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+
+    <!---------------------------------- NAVIGATION BAR ---------------------------------->
+    <nav class="topnav">
+        <a class="active" href="/admin">Dashboard</a>
+        <a href="/addroom">Add Room</a>
+        <a href="/Generate">Generate</a>
+        <a href="/result">Show Result</a>
+        <a href="/login" class="logout-btn">Logout</a>
+    </nav>
+
+    <!------------------------------ TABLE SECTION --------------------------------->
+    <div class="container">
+        <h2>Number of Rooms Generated</h2>
+
+        <table id="example" class="display">
+            <thead>
+                <tr>
+                    <th>Room Name</th>
+                    <th>Columns</th>
+                    <th>Rows</th>
+                    <th>Total Seats</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td> <!-- Room Name (String input) -->
+                    <td>{{ row[1] }}</td> <!-- Columns -->
+                    <td>{{ row[2] }}</td> <!-- Rows -->
+                    <td>{{ row[3] }}</td> <!-- Total Seats -->
+                    <td>
+                        <a href="/delete/{{ row[0] }}" class="btn delete-btn">DELETE</a>
+                    </td>
+                    <td>
+                        <a href="/edit/{{ row[0] }}" class="btn edit-btn">EDIT</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- DataTables Script -->
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable({
+                responsive: true,
+                "pageLength": 5
+            });
+        });
+    </script>
+
+</body>
+</html>

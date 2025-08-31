@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('/static/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .topnav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .topnav a.active, .topnav a:hover {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .bg-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Login Form Container */
+        .container {
+            background-color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            width: 20%; /* Adjust width as needed */
+            max-width: 400px; /* Set a max width for responsiveness */
+            min-width: 300px; /* Ensures it doesn't get too small */
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Input Fields */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            background-color: #eaeaea;
+            outline: none;
+            border: 1px solid #4CAF50;
+        }
+
+        /* Remember Me Checkbox */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        /* Error Message */
+        .error-msg {
+            color: red;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Login Button */
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            opacity: 0.9;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                max-width: 40%;
+                padding: 15px;
+                min-width: unset; 
+            }
+
+            .topnav a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="topnav">
+        <a href="/">Home</a>
+        <a class="active" href="/login">Login</a>
+        <a href="/contact">Contact</a>
+    </nav>
+
+    <!-- Background Image Section -->
+    <div class="bg-img">
+        <form action="" class="container" method="POST">
+            <h1>Login</h1>
+
+            <label for="user"><b>User</b></label>
+            <input type="text" placeholder="Enter User" name="user" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+
+            {% if error %}
+                <pre class="error-msg">{{ error }}</pre>
+            {% endif %}
+
+            <input type="submit" class="btn" value="LOGIN">
+        </form>
+    </div>
+
+</body>
+</html>

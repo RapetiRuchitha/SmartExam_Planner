@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+
+    <!------------------------------ NAVIGATION BAR ------------------------------>
+    <nav class="topnav">
+        <a href="/admin">Dashboard</a>
+        <a href="/addroom">Add Room</a>
+        <a class="active" href="/Generate">Generate</a>
+        <a href="/result">Show Result</a>
+        <a href="/login">Logout</a>
+    </nav>
+
+    <!------------------------------ GENERATE FORM ------------------------------>
+    <div class="container">
+        <form action="" method="POST">
+            <h1>Generate</h1>
+            
+            {% if error %}
+                <h4 class="error">{{ error }}</h4>
+            {% endif %}
+
+            <label for="room">Select Room</label>
+            <select id="room" name="room">
+                {% for row in room_no %}
+                    {% for no in row %}
+                        <option value="{{ no }}">{{ no }}</option>
+                    {% endfor %}
+                {% endfor %}
+            </select>
+
+            <div class="form-group">
+                <label>Start From</label>
+                <label>End To</label>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="it_start">Roll No. of 1st Year</label>
+                <input type="number" id="it_start" name="it_start" min="1100000000" max="11000000999" step="1" value="0">
+                <label for="it_end">To</label>
+                <input type="number" id="it_end" name="it_end" min="1100000000" max="11900000000" step="1" value="0">
+            </div>
+
+            <div class="form-group">
+                <label for="ec_start">Roll No. of 2nd Year</label>
+                <input type="number" id="ec_start" name="ec_start" min="2200000000" max="22000000999" step="1" value="0">
+                <label for="ec_end">To</label>
+                <input type="number" id="ec_end" name="ec_end" min="2200000000" max="22900000000" step="1" value="0">
+            </div>
+            
+
+            
+            <div class="form-group">
+                <label for="el_start">Roll No. of 3rd Year</label>
+                <input type="number" id="el_start" name="el_start" min="3300000000" max="33000000999" step="1" value="0">
+                <label for="el_end">To</label>
+                <input type="number" id="el_end" name="el_end" min="3300000000" max="33900000000" step="1" value="0">
+            </div>
+
+            
+
+            <!----------- MISSING ROLL NO ------------>
+            <div class="form-group">
+                <label for="missing">Missing Roll No.</label>
+                <input type="text" id="missing" name="missing" value="0">
+            </div>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>

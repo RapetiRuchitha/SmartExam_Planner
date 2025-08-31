@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Exam Hall Seat Allocation</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="/static/scripts/slideshow.js"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!---------------------------------- NAVIGATION BAR ---------------------------------->
+    <nav class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/contact">Contact</a>
+
+    </nav>
+
+    <!------------------------------- SLIDESHOW SECTION ---------------------------------->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/static/images/Home1.jpg" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/static/images/Home2.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/static/images/Home3.jpg" alt="Slide 3">
+        </div>
+
+        <!-- Next and Previous Buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots for Slideshow -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <!------------------------------ TEXT SECTION --------------------------------->
+    <div class="container">
+        <div class="content">
+            <h1>EXAM HALL SEAT ALLOCATION SYSTEM</h1>
+            <p>
+                The purpose of developing the exam hall seating arrangement system is to computerize the 
+                traditional way of conducting exams and assist staff in allocating exam halls easily 
+                without any burden. Another purpose of developing this software is to generate reports 
+                automatically during exams at the end of the session or in between the session.
+            </p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Slideshow -->
+    <script src="/static/scripts/slideshow.js"></script>
+
+</body>
+</html>

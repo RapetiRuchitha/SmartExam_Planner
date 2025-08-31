@@ -1,0 +1,1042 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Background Image Styling */
+.bg-img {
+    background-image: url("/static/images/img3.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Login Form Container */
+.container {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    width: 20%; /* Adjust width as needed */
+    max-width: 400px; /* Set a max width for responsiveness */
+    min-width: 300px; /* Ensures it doesn't get too small */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+
+
+/* Input Fields */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: #eaeaea;
+    outline: none;
+    border: 1px solid #4CAF50;
+}
+
+/* Remember Me Checkbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+/* Error Message */
+.error-msg {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Login Button */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        max-width: 40%;
+        padding: 15px;
+        min-width: unset; 
+    }
+
+    .topnav a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.topnav {
+    background-color: #2c3e50;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.topnav a:hover {
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 5px;
+}
+
+.topnav .logout-btn {
+    background-color: #e74c3c;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.topnav .logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Slideshow Images */
+.slideshow-container img {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Page Heading */
+h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #34495e;
+    color: white;
+}
+
+td {
+    background-color: #ecf0f1;
+}
+
+/* Dots (Indicators) */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Page Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    background: white;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+@media screen and (max-width: 768px) {
+    .content h1 {
+        font-size: 14px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ------------------- NAVIGATION BAR ------------------- */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logout-btn {
+    float: right;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/* ------------------- TABLE SECTION ------------------- */
+.container {
+    width: 90%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* DataTable Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* ------------------- BUTTONS ------------------- */
+.btn {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}
+
+.edit-btn {
+    background-color: #008CBA;
+}
+
+.edit-btn:hover {
+    background-color: #005f73;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .topnav a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logout-btn {
+        float: none;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ------------------- NAVIGATION BAR ------------------- */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* ------------------- CONTACT FORM ------------------- */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    resize: none;
+}
+
+textarea {
+    height: 150px;
+}
+
+/* Submit Button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    input[type=text], textarea {
+        font-size: 14px;
+    }
+
+    input[type=submit] {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* ------------------- NAVIGATION BAR ------------------- */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* ------------------- GENERATE FORM ------------------- */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type=number], input[type=text], select {
+    width: 45%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 50%;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    input[type=number], input[type=text], select {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type=number], input[type=text], select {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding: 0 10px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Container */
+.container {
+    width: 40%;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding: 0 10px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Page Heading */
+.heading {
+    margin-top: 30px;
+    font-size: 26px;
+    color: #333;
+}
+
+/* Team Members Container */
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual Card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.title {
+    color: grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Contact Button */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    padding: 0 10px;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Main Content Container */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Form Elements */
+select, input[type="submit"], .download-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    background-color: white;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="submit"], .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover, .download-btn:hover {
+    background-color: #45a049;
+}
+
+/* Download Button */
+.download-btn a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Results Table */
+.result-container {
+    overflow-x: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+}
